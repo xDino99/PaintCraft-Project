@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    border: 4px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    display: block;
+    background: #87CEEB;
+    cursor: crosshair;
+}
+
+#toolbar {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.tool {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #555;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s;
+    position: relative;
+    user-select: none;
+}
+
+.tool.active {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.key-hint {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 10px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+#tool-color-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="color"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+}

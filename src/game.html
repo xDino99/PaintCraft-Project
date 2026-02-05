@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PaintCraft - Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+        <div id="toolbar">
+            <div class="tool active" id="tool-pickaxe" onclick="selectTool('pickaxe')">
+                <span class="key-hint">1</span> ⛏️
+            </div>
+
+            <div class="tool" id="tool-block" onclick="selectTool('block')">
+                <span class="key-hint">2</span> 🧱
+            </div>
+
+            <div class="tool" id="tool-picker" onclick="selectTool('picker')">
+                <span class="key-hint">3</span> 🖌️
+            </div>
+
+            <div class="tool" id="tool-color-wrapper" onclick="triggerColorClick()">
+                <span class="key-hint">4</span> 🎨
+                <input type="color" id="colorPicker" value="#8b4513">
+            </div>
+        </div>
+    </div>
+
+    <p style="color: #aaa; font-size: 0.9rem;"> <a href="index.html" style="color:#fff">Back to Menu</a></p>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

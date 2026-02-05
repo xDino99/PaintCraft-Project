@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #382618;
+            font-family: 'VT323', monospace;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .logo-container {
+            position: relative;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin: 0;
+            color: #b0b0b0;
+            letter-spacing: 2px;
+        }
+
+        .captcha-box {
+            background: #2a2a2a;
+            border: 4px solid #fff;
+            padding: 20px;
+            width: 320px;
+            text-align: center;
+        }
+
+        .captcha-display {
+            background: #ddd;
+            color: #333;
+            font-size: 42px;
+            padding: 10px;
+            margin: 15px 0;
+            text-decoration: line-through;
+            letter-spacing: 8px;
+            border: 3px inset #888;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-family: 'VT323', monospace;
+            font-size: 24px;
+            margin-bottom: 20px;
+            background: #fff;
+            border: 3px solid #555;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .pc-btn {
+            width: 100%;
+            background-color: #7d7d7d;
+            border: 2px solid;
+            border-color: #a8a8a8 #383838 #383838 #a8a8a8;
+            color: white;
+            padding: 10px;
+            font-family: 'VT323', monospace;
+            font-size: 28px;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+
+        .pc-btn:hover {
+            background-color: #8f8f8f;
+        }
+
+        .pc-btn:active {
+            border-color: #383838 #a8a8a8 #a8a8a8 #383838;
+            padding-top: 12px;
+            padding-bottom: 8px;
+        }
+
+        .error-text {
+            color: #ff5555;
+            font-size: 20px;
+            margin-top: 10px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo-container">
+        <h1>SECURITY</h1>
+    </div>
+
+    <div class="captcha-box">
+        <h2 style="margin: 0; font-size: 32px;">VERIFY IDENTITY</h2>
+        <div id="captchaText" class="captcha-display"></div>
+        <input type="text" id="userInput" autocomplete="off" placeholder="Type code...">
+        <button class="pc-btn" onclick="validate()">CONTINUE</button>
+        <div id="error" class="error-text">INVALID CODE!</div>
+    </div>
+
+    <script>
+        let code = "";
+
+        function generate() {
+            const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+            code = "";
+            for (let i = 0; i < 5; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById("captchaText").innerText = code;
+        }
+
+        function validate() {
+            const input = document.getElementById("userInput").value.toUpperCase();
+            const error = document.getElementById("error");
+
+            if (input === code) {
+                window.location.href = "src/menu.html";
+            } else {
+                error.style.visibility = "visible";
+                generate();
+                document.getElementById("userInput").value = "";
+            }
+        }
+
+        generate();
+    </script>
+
+</body>
+
+</html>
