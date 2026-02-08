@@ -27,10 +27,8 @@ PaintCraft is a web-based 2D creative sandbox game built with HTML5 Canvas. Insp
 
 No installation required! PaintCraft runs entirely in the browser.
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/youruser/paintcraft.git
-    ```
+1.  Clone the repository
+
 2.  Open `index.html` in any modern web browser.
 
 ## 🎮 How to Play
