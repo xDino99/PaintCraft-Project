@@ -4,24 +4,23 @@ PaintCraft is a web-based 2D creative sandbox game built with HTML5 Canvas. Insp
 
 ## 🚀 Features
 
-- **Custom World Types:** Choose between **Normal** (Procedural), **Flat**, or **Empty**.
+- **Custom World Types:** Choose between **Normal**, **Flat**, or **Empty**.
 - **Creative Tools:**
   - ⛏️ **Eraser (Pickaxe):** Remove any block from the canvas.
   - 🧱 **Paint Block:** Place blocks with custom colors.
   - 🖌️ **Color Sampler (Picker):** Pick colors directly from existing blocks.
   - 🎨 **Dynamic Palette:** Integrated HEX color picker for unlimited creativity.
-- **Weather System:** Enable real-time **Rain** or **Snow** effects.
+- **Weather System:** Enable **Rain** or **Snow** effects.
 - **Customizable UI:** - Change Menu backgrounds via URL or solid colors.
   - Adjustable resolutions (Small to Full HD).
   - Day/Night lighting modes.
-- **Skins:** Personalize your character's base color.
 
 ## 🛠️ Tech Stack
 
-* **HTML5** - Semantic structure and Canvas API.
-* **CSS3** - Custom Pixel-Art styling and animations.
-* **JavaScript (ES6+)** - Game logic, particle systems, and rendering engine.
-* **LocalStorage API** - Persistent user settings and world configurations.
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **LocalStorage API**
 
 ## 📦 Installation
 
@@ -33,7 +32,7 @@ No installation required! PaintCraft runs entirely in the browser.
 
 ## 🎮 How to Play
 
-1.  **Launch:** Choose "New Canvas" from the main menu.
+1.  **Launch:** Choose "Play" from the main menu.
 2.  **Select World:** Pick your starting terrain.
 3.  **Controls:**
     * `Keys 1-4`: Switch between tools.
