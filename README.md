@@ -1,6 +1,6 @@
 # 🎨 PaintCraft
 
-PaintCraft is a web-based 2D creative sandbox game built with HTML5 Canvas. Inspired by retro building games, it allows users to paint, build, and design custom worlds directly in their browser.
+PaintCraft is a web-based 2D creative sandbox game built with HTML5. Inspired by retro building games, it allows users to paint, build, and design custom worlds directly in their browser.
 
 ## 🚀 Features
 
