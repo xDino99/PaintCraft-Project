@@ -40,3 +40,5 @@ No installation required! PaintCraft runs entirely in the browser.
     * `Key 4`: Open the color palette.
     * `Touch`: It's just a matter of touching, that's why it's compatible with mobile phones.
 4.  **Save:** Your settings are automatically saved in your browser's local storage.
+
+This README was created by AI, which is why it had some errors and inaccuracies, but these have now been corrected.
